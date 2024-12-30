@@ -2,12 +2,23 @@ import openai
 from docx import Document
 import os
 from dotenv import load_dotenv
+from fastapi import FastAPI, File, UploadFile
+from pydantic import BaseModel
+from io import BytesIO
+import json
+import uvicorn
 
+# Initialize FastAPI app
+app = FastAPI()
+
+# Load environment variables
 load_dotenv()
 
+# Set OpenAI API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-def extract_questions_answers_with_openai(doc_path):
+# Helper function to extract questions and answers from the DOCX file
+def extract_questions_answers_with_openai(doc_path: str):
     """
     Reads the content of a DOCX file and sends it to OpenAI API to extract questions and suggested answers.
     If the document is for a case study assessment, extracts the case study context separately and only once.
@@ -61,8 +72,7 @@ def extract_questions_answers_with_openai(doc_path):
                                       "          'suggested_answer': <suggested_answer_list> },\n"
                                       "        ...\n"
                                       "}\n\n"
-                                      "Now process the following content:"
-                                      }
+                                      "Now process the following content:"}
         ]
 
     # Send the content to OpenAI with the selected prompt
@@ -73,15 +83,28 @@ def extract_questions_answers_with_openai(doc_path):
 
     return response["choices"][0]["message"]["content"]
 
-# Example usage
+# API endpoint to upload the DOCX file
+@app.post("/extract/")
+async def extract_data_from_docx(file: UploadFile = File(...)):
+    # Read file content
+    doc_content = await file.read()
+
+    # Convert byte data to a temporary file-like object
+    doc_path = "temp_doc.docx"
+    with open(doc_path, "wb") as temp_file:
+        temp_file.write(doc_content)
+
+    # Process the DOCX file
+    extracted_data = extract_questions_answers_with_openai(doc_path)
+
+    # Return extracted data as JSON response
+    try:
+        return json.loads(extracted_data)
+    except json.JSONDecodeError:
+        return {"error": "Failed to parse the response from OpenAI"}
+
+# Run the app with uvicorn if the script is executed directly
 if __name__ == "__main__":
-    # Path to your DOCX file
-    doc_path = "read.docx"  # Replace with the path to your DOCX file
-
-    result = extract_questions_answers_with_openai(doc_path)
-    print("Extracted Data:")
-    print(result)
-
-    # Save the result to a JSON file
-    with open("output.json", "w") as json_file:
-        json_file.write(result)
+    import threading
+    import uvicorn
+    threading.Thread(target=lambda: uvicorn.run(app, host="127.0.0.1", port=7300, log_level="info")).start()
