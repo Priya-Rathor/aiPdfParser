@@ -1,0 +1,113 @@
+```json
+[
+    {
+        "question": "Describe 2 ways of the affiliate marketing�s role on an organization�s overall marketing strategy.",
+        "suggested_answer": [
+            "Reaching the Target Audience: Affiliate marketing can extend the organization�s reach into new and existing market segments through affiliates who already have the trust and attention of these audiences. By partnering with affiliates that align with the organization�s target demographics and interests, the organization can efficiently broaden its reach.",
+            "Driving Sales: Affiliates drive sales by leveraging their platforms (such as blogs, social media, email lists) to promote the organization�s products or services. Effective affiliates turn their audience�s trust into action, guiding them through the sales funnel. Strategies here include exclusive affiliate promotions, product reviews, and personalized affiliate links that track conversions.",
+            "Enhancing Brand Visibility: Affiliates contribute to brand visibility by introducing the brand to new audiences and reinforcing its presence among existing customers. This is achieved through content marketing, social media engagement, and other digital marketing strategies that highlight the brand's values, benefits, and offerings.",
+            "Setting Specific Objectives for the Affiliate Program: Objectives should be SMART and may include metrics such as a certain percentage increase in sales through affiliate channels, growth in traffic from affiliate referrals, or expansion of the affiliate network within specific market segments. These objectives should be closely aligned with the key marketing objectives of the organization, ensuring that every affiliate activity contributes towards the broader marketing goals.",
+            "Alignment with Marketing Goals: Ensuring that the affiliate marketing strategy is not operating in isolation but is an integral part of the marketing strategy requires ongoing communication and alignment. This involves regular reviews and adjustments based on performance data, changes in market conditions, and shifts in business strategy. It also requires aligning the content and messaging across all channels to ensure a consistent brand experience."
+        ],
+        "question_type": "WA1",
+        "question_instruction": "Spend approx.10 minutes answering this question"
+    },
+    {
+        "question": "Describe 2 principles for constructing affiliate portfolios in relation to policies and guidelines on affiliate marketing.",
+        "suggested_answer": [
+            "Transparency and Disclosure: Maintain transparency about affiliate relationships to ensure consumers are aware when content is sponsored. Application in Singapore: Affiliates operating in Singapore must clearly disclose their affiliations in their content. This can be achieved by including visible disclaimers or using hashtags like #ad or #sponsored. The Advertising Standards Authority of Singapore (ASAS) encourages clear disclosures to maintain consumer trust.",
+            "Adherence to Advertising Standards: Uphold honesty and clarity in all advertising efforts. Application in Singapore: Ensure that all promotional materials are truthful and not misleading, aligning with the Singapore Code of Advertising Practice (SCAP). Misrepresentation or exaggeration of product features is strictly against SCAP guidelines.",
+            "Respect for Intellectual Property: Ensure proper authorization for the use of branded content. Application in Singapore: Intellectual property laws in Singapore are stringent. Affiliates must have explicit permission to use trademarks, logos, or copyrighted materials from their partners. Utilizing official marketing resources provided by affiliate programs is advisable to avoid legal complications.",
+            "Data Privacy Compliance: Comply with data protection laws to safeguard individual privacy. Application in Singapore: Affiliates must adhere to the Personal Data Protection Act (PDPA), which governs the collection, use, and disclosure of personal data. Clear consent must be obtained before collecting data from consumers, and it should be used strictly for the purposes stated at the collection point.",
+            "Platform-Specific Rules Adherence: Follow the specific guidelines set by marketing platforms. Application in Singapore: In accordance with Lazada�s guidelines, affiliates operating in Singapore must commit to upholding content standards by avoiding the promotion of any material that could be deemed offensive, misleading, or inappropriate. This aligns with the Singaporean ethos of integrity and multicultural sensitivity. Content created by affiliates should be respectful of Singapore's diverse society and adhere strictly to the truth-in-advertising principles outlined by the Advertising Standards Authority of Singapore (ASAS). Any claims made about products should be verifiable and presented in good taste, ensuring they meet both Lazada's and Singapore�s high standards for commercial communication.",
+            "Industry-Specific Regulatory Compliance: Observe additional regulations applicable to specific industries. Application in Singapore: For affiliates marketing products in regulated sectors (e.g., financial services, health supplements), understanding and complying with the relevant regulations, such as those imposed by the Monetary Authority of Singapore (MAS) or the Health Sciences Authority (HSA), is crucial. This ensures that all promotional content is compliant and not misleading."
+        ],
+        "question_type": "WA2",
+        "question_instruction": "Spend approx. 10 minutes answering this question"
+    },
+    {
+        "question": "Describe 2 ways to understand market trends to identify an organization�s current and emerging products and services for affiliate marketing.",
+        "suggested_answer": [
+            "Market Research: Regularly conducting market research to uncover shifts in consumer behavior, preferences, and demands.",
+            "Industry Reports and Insights: Leveraging industry reports and insights from market research firms to identify fast-growing sectors.",
+            "Social Media Monitoring: Utilizing social media platforms to monitor conversations, hashtags, and influencers for early signs of trending products or services.",
+            "Competitor Analysis: Keeping an eye on competitors and industry leaders to see what new offerings they are promoting."
+        ],
+        "question_type": "WA3",
+        "question_instruction": "Spend approx. 5 minutes answering this question"
+    },
+    {
+        "question": "Describe 2 types of partners related to affiliate marketing.",
+        "suggested_answer": [
+            "Influencers and Bloggers: Individuals with significant online followings who can sway their audience's purchasing decisions.",
+            "Content Creators: Creators who specialize in generating engaging content, such as videos, podcasts, or articles.",
+            "Review Sites: Websites dedicated to providing in-depth reviews and comparisons of products or services.",
+            "Affiliate Networks: Intermediaries that connect advertisers with affiliates, offering a range of tools and services to both.",
+            "Email Marketers: Affiliates who specialize in building and engaging with an email subscriber list."
+        ],
+        "question_type": "WA4",
+        "question_instruction": "Spend approx. 5 minutes answering this question"
+    },
+    {
+        "question": "Describe 1 factor for selecting affiliates and 1 incentive framework to motivate affiliates to achieve higher performance levels.",
+        "suggested_answer": [
+            "Factors for Selecting Affiliates:",
+            "Audience Alignment: The affiliate's audience should closely align with the brand�s target market, ensuring the promotional efforts reach the intended consumers.",
+            "Content Quality and Relevance: High-quality, relevant content that resonates with the audience can significantly enhance engagement and conversion rates.",
+            "Platform Presence: The choice of platform is crucial, as different platforms cater to varying demographics and interests. Selecting affiliates with a strong presence on the most relevant platforms is key.",
+            "Performance Metrics: Historical performance data, such as conversion rates, click-through rates, and overall engagement, provide insight into an affiliate's potential effectiveness.",
+            "Brand Compatibility: Affiliates should embody and reflect the brand's values and image, ensuring a cohesive and authentic marketing message.",
+            "Creativity and Innovation: Affiliates who demonstrate creativity in their promotional tactics can often engage audiences in unique and compelling ways.",
+            "Compliance and Ethical Considerations: Ensuring that affiliates adhere to legal standards and ethical marketing practices is non-negotiable.",
+            "Incentive Frameworks for Affiliates:",
+            "Commission Structures: Percentage Sales: Offering a percentage of the sale value is common. Higher percentages can be offered for products with higher margins or strategic importance.",
+            "Tiered Commissions: Implementing tiers based on performance metrics encourages affiliates to exceed baseline goals for higher rewards.",
+            "Bonuses and Contests:",
+            "Performance Bonuses: Rewarding top performers with bonuses can incentivize higher sales volumes.",
+            "Contests: Organizing contests with prizes for top affiliates or most improved performances over a period can foster healthy competition.",
+            "Exclusive Deals and Promotions: Providing affiliates with exclusive deals or products for promotion can help them attract their audience with unique offerings.",
+            "Product Samples and Demos: Offering free products or demos enables affiliates to create more authentic and persuasive content, enhancing promotional effectiveness.",
+            "Training and Support: Investing in affiliate education and providing marketing support can improve their ability to sell effectively, benefiting both the affiliate and the brand.",
+            "Recognition Programs: Recognizing and showcasing successful affiliates through feature articles, social media shoutouts, or affiliate spotlights can boost morale and loyalty."
+        ],
+        "question_type": "WA5",
+        "question_instruction": "Spend approx. 10 minutes answering this question"
+    },
+    {
+        "question": "Describe 1 best practice for effective campaign management and collaboration.",
+        "suggested_answer": [
+            "Personalized Management: Tailor campaign management approaches to suit the unique needs and preferences of different affiliates, recognizing their individual contributions to campaign success.",
+            "Ethical Practices: Maintain high ethical standards in campaign practices, ensuring that all promotional activities adhere to legal requirements and ethical guidelines.",
+            "Recognition and Appreciation: Acknowledge and appreciate the efforts of affiliate partners, celebrating successes and recognizing contributions to foster loyalty and long-term partnerships."
+        ],
+        "question_type": "WA6",
+        "question_instruction": "Spend approx. 10 minutes answering this question"
+    },
+    {
+        "question": "Identify and explain 2 performance metrics as the criteria to review affiliate marketing from an organization�s point of view.",
+        "suggested_answer": [
+            "Return on Investment (ROI): Measures the profitability of the affiliate marketing campaigns, calculated by comparing the revenue generated from affiliate sales to the cost of running the affiliate program.",
+            "Conversion Rate: The percentage of users who take a desired action (e.g., make a purchase) after clicking on an affiliate link, indicating the effectiveness of affiliate traffic in driving sales.",
+            "Average Order Value (AOV): The average amount spent by customers who purchase through affiliate links, helping to assess the value affiliates bring to each transaction.",
+            "Cost per Acquisition (CPA): The total cost associated with acquiring a new customer through affiliate marketing efforts, vital for evaluating the cost-effectiveness of the affiliate program.",
+            "Customer Lifetime Value (CLTV): Represents the total revenue a business can expect from a single customer account throughout their relationship, helping to understand the long-term value of acquiring customers via affiliates.",
+            "Affiliate Share of Voice (SoV): Analyzes the visibility and influence of an organization's affiliates compared to competitors within the same niche or industry, highlighting the market positioning."
+        ],
+        "question_type": "WA7",
+        "question_instruction": "Spend approx. 10 minutes answering this question"
+    }
+]
+```
+
+messages=[
+    {"role": "system", "content": "You are an assistant that extracts structured information from text."},
+    {"role": "user", "content": f"Extract all the questions and suggested answers from the following text and format them as a JSON array. Each item should have the following structure:\n"
+                              "1. Include 'question' and 'suggested_answer' keys.\n"
+                              "2. In the 'suggested_answer', separate the points as individual elements in an array.\n"
+                              "3. If the document is for a case study assessment, provide the entire context of the case study exactly as it is written in the document.\n"
+                              "4. Add a 'question_type' tag like 'WA5', 'WA6', etc., along with the question number.\n"
+                              "5. Ensure no points are shortened or altered, and the content remains intact as it is.\n"
+                              "6. Extract any specific instructions like time to spend on the question and include them in a separate field 'question_instruction'.\n\n"
+                              f"Here is the document content:\n{content}"}
+]
+)
