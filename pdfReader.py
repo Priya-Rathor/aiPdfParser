@@ -7,7 +7,7 @@ from pydantic import BaseModel
 from io import BytesIO
 import json
 import uvicorn
-
+from fastapi.middleware.cors import CORSMiddleware
 # Initialize FastAPI app
 app = FastAPI()
 
@@ -16,6 +16,14 @@ load_dotenv()
 
 # Set OpenAI API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 # Helper function to extract questions and answers from the DOCX file
 def extract_questions_answers_with_openai(doc_path: str):
@@ -82,7 +90,9 @@ def extract_questions_answers_with_openai(doc_path: str):
     )
 
     return response["choices"][0]["message"]["content"]
-
+@app.get("/")
+def Hello():
+    return "hello"
 # API endpoint to upload the DOCX file
 @app.post("/extract/")
 async def extract_data_from_docx(file: UploadFile = File(...)):
@@ -105,6 +115,6 @@ async def extract_data_from_docx(file: UploadFile = File(...)):
 
 # Run the app with uvicorn if the script is executed directly
 if __name__ == "__main__":
-    import threading
-    import uvicorn
-    threading.Thread(target=lambda: uvicorn.run(app, host="127.0.0.1", port=7300, log_level="info")).start()
+    # Run the server using uvicorn
+    
+    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
