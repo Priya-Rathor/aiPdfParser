@@ -1,3 +1,7 @@
+#-------------------------------------------------------------------------------------------------------------------------------------
+#                                             Docx Reader and give out put in wanted form
+#-------------------------------------------------------------------------------------------------------------------------------------
+
 import openai
 from docx import Document
 import os
@@ -42,14 +46,14 @@ def extract_questions_answers_with_openai(doc_path: str):
             {"role": "user", "content": f"Extract the case study context only once if the document is for a case study assessment. Then extract all the questions and suggested answers, and format them as a JSON array. Each item should have the following structure:\n"
                                       "1. Include 'question' and 'suggested_answer' keys.\n"
                                       "2. In the 'suggested_answer', separate the points as individual elements in an array.\n"
-                                      "3. Add a 'question_type' tag like 'WA5', 'WA6', etc., along with the question number.\n"
-                                      "4. Ensure no points are shortened or altered, and the content remains intact as it is.\n"
-                                      "5. Extract any specific instructions like time to spend on the question and include them in a separate field 'question_instruction'.\n"
-                                      "6. If the document contains a case study, provide the full context of the case study exactly as it is written in the document in a separate field 'case_study_context' (only once).\n\n"
+                                      "3. Ensure no points are shortened or altered, and the content remains intact as it is.\n"
+                                      "4. Extract any specific instructions like time to spend on the question and include them in a separate field 'question_instruction'.\n"
+                                      "5. If the document contains a case study, provide the full context of the case study exactly as it is written in the document in a separate field 'case_study_context' (only once).\n\n"
                                       "Here is the document content:\n"
                                       f"{content}\n\n"
                                       "Please ensure the output is in JSON format and includes the following structure:\n"
                                       "{\n"
+                                      "     'assessment_type':'case_study', \n" 
                                       "    'case_study_context': <case study content>,\n"
                                       "    'questions_and_answers': [\n"
                                       "        { 'question_number': <question_number>,\n"
@@ -74,11 +78,14 @@ def extract_questions_answers_with_openai(doc_path: str):
                                       f"Here is the document content:\n{content}\n\n"
                                        "Please ensure the output is in JSON format and includes the following structure:\n"
                                       "{\n"
+                                      "   'assessment_type':'written_assesement'\n "
+                                       "  'questions_and_answers': [\n"
                                       "        { 'question_number': <question_number>,\n"
                                       "          'question': <question_text>,\n"
                                       "          'question_instruction': <question_instruction>,\n"
                                       "          'suggested_answer': <suggested_answer_list> },\n"
                                       "        ...\n"
+                                      "     ] \n "
                                       "}\n\n"
                                       "Now process the following content:"}
         ]
@@ -86,7 +93,8 @@ def extract_questions_answers_with_openai(doc_path: str):
     # Send the content to OpenAI with the selected prompt
     response = openai.ChatCompletion.create(
         model="gpt-4",  # Use the correct model name
-        messages=prompt
+        messages=prompt,
+        timeout=180
     )
 
     return response["choices"][0]["message"]["content"]
