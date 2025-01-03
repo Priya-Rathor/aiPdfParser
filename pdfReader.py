@@ -1,7 +1,3 @@
-#-------------------------------------------------------------------------------------------------------------------------------------
-#                                             Docx Reader and give Structured JONS
-#-------------------------------------------------------------------------------------------------------------------------------------
-
 import openai
 from docx import Document
 import os
@@ -125,4 +121,4 @@ async def extract_data_from_docx(file: UploadFile = File(...)):
 if __name__ == "__main__":
     # Run the server using uvicorn
     
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
+    uvicorn.run(app, host="127.0.0.1", port=8000, log_level="info")
