@@ -78,6 +78,7 @@ def extract_questions_answers_with_openai(content: str):
                 Example output format:
                 {{
                     "assessment_type": "written_assessment",
+                    "case_study_context": "",
                     "questions_and_answers": [
                         {{
                             "question_number": <question_number>,
