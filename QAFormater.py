@@ -101,7 +101,7 @@ def extract_questions_answers_with_openai(content: str):
     )
 
     return response["choices"][0]["message"]["content"]
-@app.get("/")
+@app.get("/hello")
 def hello():
     return "Hello, World!"
 
