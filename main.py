@@ -15,8 +15,8 @@ app = FastAPI()
 load_dotenv()
 
 # Set Gimmia API key securely using environment variable
-genai_api_key = os.getenv("GENAI_API_KEY")
-genai.configure(api_key=genai_api_key)
+#genai_api_key = os.getenv("GENAI_API_KEY")
+genai.configure(api_key="AIzaSyDUiT3yPTTo2nmoPRj-hpo2r2OyrPH5cqs")
 
 # Add CORS middleware
 app.add_middleware(
