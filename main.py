@@ -147,6 +147,11 @@ def extract_questions_answers_with_openai(content: str):
     except Exception as e:
         print(f"Error during the request: {e}")
         return {"error": f"Error processing the request: {str(e)}"}
+    
+
+
+
+    
 
 @app.get("/hello")
 def hello():
