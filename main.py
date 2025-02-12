@@ -56,15 +56,19 @@ def extract_questions_answers_with_openai(content: str):
                     "text": (
                         f"""
                         Extract the case study context only once if the document is for a case study assessment. Then extract all the questions and suggested answers, and format them as a JSON array. Each item should have the following structure:
+                        -'Total Duration,Duration,time(Give only number , do not add any unit name with the number example:- 30 ,60,120 etc)'
+                        -'instructions to Candidate'
                         - 'question_number'
                         - 'question'
-                        - 'question_instruction'
+                        - 'question_instruction (These instruction come after question number. It is present in ())'
                         - 'suggested_answer' (as an array of points)
                         - 'case_study_context' (if applicable)
 
                         Example output format:
                         {{
                             "assessment_type": "case_study",
+                            "duration":"Duration",
+                            "assessment_instruction":[<instructions to Candidate_point_1>, <instructions to Candidate_point_2>, ...],
                             "case_study_context": "<case study content>",
                             "questions_and_answers": [
                                 {{
@@ -96,14 +100,18 @@ def extract_questions_answers_with_openai(content: str):
                     "text": (
                         f"""
                         Extract all the questions and suggested answers, and format them as a JSON array. Each item should have the following structure:
+                        -'Total Duration,Duration,time(Give only number , do not add any unit name with the number example:- 30 ,60,120 etc)'
+                        -'instructions to Candidate'
                         - 'question_number'
                         - 'question'
-                        - 'question_instruction'
+                        - 'question_instruction (These instruction come after question number. It is present in ())'
                         - 'suggested_answer' (as an array of points)
 
                         Example output format:
                         {{
                             "assessment_type": "written_assessment",
+                            "duration"Duration",
+                            "assessment_instruction":[<instructions to Candidate_point_1>, <instructions to Candidate_point_2>, ...],
                             "case_study_context": "",
                             "questions_and_answers": [
                                 {{
