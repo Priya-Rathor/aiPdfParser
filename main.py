@@ -61,6 +61,7 @@ def extract_questions_answers_with_openai(content: str):
                         - 'question_number'
                         - 'question'
                         - 'question_instruction (These instruction come after question number. It is present in ())'
+                        -'comparison_count (This count will come after the Suggested answer Handing give if it is present if not then give write all)'
                         - 'suggested_answer' (as an array of points)
                         - 'case_study_context' (if applicable)
 
@@ -75,6 +76,7 @@ def extract_questions_answers_with_openai(content: str):
                                     "question_number": <question_number>,
                                     "question": "<question_text>",
                                     "question_instruction": "<question_instruction>",
+                                    "comparison_count":<comparison_count>,
                                     "suggested_answer": [<answer_point_1>, <answer_point_2>, ...]
                                 }}
                             ]
@@ -105,6 +107,7 @@ def extract_questions_answers_with_openai(content: str):
                         - 'question_number'
                         - 'question'
                         - 'question_instruction (These instruction come after question number. It is present in ())'
+                        -'comparison_count (This count will come after the Suggested answer Handing give if it is present if not then give write all)'
                         - 'suggested_answer' (as an array of points)
 
                         Example output format:
@@ -118,6 +121,7 @@ def extract_questions_answers_with_openai(content: str):
                                     "question_number": <question_number>,
                                     "question": "<question_text>",
                                     "question_instruction": "<question_instruction>",
+                                    "comparison_count":<comparison_count>,
                                     "suggested_answer": [<answer_point_1>, <answer_point_2>, ...]
                                 }}
                             ]
@@ -181,4 +185,4 @@ async def extract_data_from_text(content: str = Form(...)):
 
 # Run the app with uvicorn if the script is executed directly
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
+    uvicorn.run(app, host="127.0.0.1", port=8000, log_level="info")
